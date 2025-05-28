@@ -1,3 +1,4 @@
+/// jakii
 <?php
 include 'koneksi.php';
 $showModal = false;
@@ -8,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $query = "INSERT INTO produk (Nama_Produk, Harga, Stok) VALUES (?, ?, ?)";
     $params = [$nama, $harga, $stok];
     $stmt = sqlsrv_query($conn, $query, $params);
-    if ($stmt) {
+    if ($stmt
         $showModal = true;
     } else {
         $error = "Gagal menambahkan produk.";
